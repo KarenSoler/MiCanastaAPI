@@ -10,7 +10,7 @@ const barrio = require('./models/barrio')
 const tienda = require('./models/tienda')
 const cliente = require('./models/cliente')
 const tendero = require('./models/tendero')
-const sujerencia = require('./models/sugerencia')
+const sugerencia = require('./models/sugerencia')
 const app = express()
 
 app.use(cors())
@@ -24,7 +24,7 @@ require('./routes/barrio')(app)
 require('./routes/tienda')(app)
 require('./routes/cliente')(app)
 require('./routes/tendero')(app)
-require('./routes/sujerencia')(app)
+require('./routes/sugerencia')(app)
 
 
 app.listen(port, () => {
