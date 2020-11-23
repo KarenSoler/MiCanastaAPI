@@ -1,13 +1,12 @@
 /**menu*/
 .navbar-nav1{
     margin-left: 83%;
-   
 }
 
 .fa-bell{
     font-size: 30px;
     width: 40px;
-   color: black;
+    color: black;
 }
 
 .fa-user{
@@ -22,7 +21,6 @@
 }
 
 /*Mercado*/
-
 body {
     font-family: "Merriweather", serif;
     font-size: 18px;
