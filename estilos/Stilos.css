@@ -413,3 +413,134 @@ color: rgb(143, 143, 201);
   font-family: 'Gayathri', sans-serif;
 }
 
+.container_client{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.item1{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1;
+  
+}
+.item2{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/4;
+  grid-row: 1;
+}
+.item3{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2;
+}
+.item4{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/4;
+  grid-row: 2;
+}.item5{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 3;
+}
+.item6{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/4;
+  grid-row: 3;
+}.item7{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 4;
+}
+.item8{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/4;
+  grid-row: 4;
+}
+.item9{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 5;
+}
+.item10{
+  margin:10px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/4;
+  grid-row: 5;
+}
+.btn-client{
+  width: 85%;
+}
+
+.container__modal{
+  margin:0;
+  background-color: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 12;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.active_modal{
+  display:flex;
+}
+.container__modal-form{
+  margin:0;
+  background-color: beige;
+  width: 80vw;
+  height: 80vh;
+  position: fixed;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+
+.container__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.btn-client{
+  color: white;
+}
+
+.form_client{
+  padding: 10px;
+}

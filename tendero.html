@@ -50,21 +50,22 @@
       <div class="card">
         <img src="./imagenes/USER.png" class="card-img-top imgUser" alt="User" width="200" height="320">
         <div class="card-body">
-          <h5 class="card-title">RAFAEL ANTONIO CACERES MOLINA</h5>
+          <h5 class="card-title" id="n-tendero">RAFAEL ANTONIO CACERES MOLINA</h5>
           <table class="table">
             <tbody>
               <tr>
                 <td>Número de móvil:</td>
-                <td>3226743300</td>
+                <td id="t-tendero">3226743300</td>
               </tr>
               <tr>
                 <td>Correo electrónico:</td>
-                <td>r_antonio@gmail.com</td>
+                <td id="c-tendero">r_antonio@gmail.com</td>
               </tr>
               <tr>
                 <td>Dirección:</td>
-                <td>Suba Crr 114-#152D-09</td>
+                <td id="d-tendero">Suba Crr 114-#152D-09</td>
               </tr>
+              <button class="btn-client" onclick="activateModal('#container__modal')">Actualizar</button>
             </tbody>
           </table>
         </div>
@@ -147,7 +148,28 @@
   </section>
  </div>
 
- 
+<div class="container__modal" id="container__modal">
+  <div class="container__modal-form">
+    <form class="form_client">
+      <input type="text" name="name-client" id="name-form">
+      <label >Nombre</label>
+      
+      <input type="text" name="localidad-client" id="numero-form">
+      <label >Numero movil</label>
+      
+      <input type="text" name="barrio-client" id="correo-form">
+      <label >Correo</label>
+      
+      <input type="text" name="address-client" id="address-form">
+      <label >Direccion</label>
+      
+      <div class="container__button">
+          <button class="boton-actual" id="actualizador" onclick="tendero('#container__modal', event)">Actualizar</button>
+      </div>
+          
+    </form>
+  </div>
+</div>
 
 
 
@@ -155,6 +177,6 @@
     <footer>
       <p class="footer"> Hecho por Cynane's Proyect. | Todos los derechos reservados.</p>
     </footer>
-
+    <script src="./simulador/control_modal.js"></script>
   </body>
 </html>

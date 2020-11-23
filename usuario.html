@@ -54,12 +54,15 @@ navbarText-secondary iconos">
                     <h2 class="card-title">
                         <p>Usuario</p>
                     </h2>
-                    <p class="card-text">Nombre: Andrea Catellanos.</p>
-                    <p class="card-text">Edad: 23 años.</p>
-                    <p class="card-text">Localidad: Ciudad bolivar.</p>
-                    <p class="card-text">Barrio: La Coruna.</p>
-                    <p class="card-text">Direccion: cll 58 a sur # 49 a - 09.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="container_client">
+                        <p class="card-text item1">Nombre:</p><p class="card-text item2" id="name_client">Andrea Catellanos.</p>
+                        <p class="card-text item3">Edad:</p><p class="card-text item4" id="age_client">23</p>
+                        <p class="card-text item5">Localidad:</p><p class="card-text item6" id="upz_client">Ciudad bolivar</p>
+                        <p class="card-text item7">Barrio:</p><p class="card-text item8" id="location_client">La Coruna</p>
+                        <p class="card-text item9">Direccion:</p><p class="card-text item10" id="address_client"> cll 58 a sur # 49 a - 09</p>
+                    </div>
+                    <button class="btn-client" onclick="activateModal('#container__modal',event)">Actualizar</button>
+                    <p class="card-text item11"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>
@@ -127,13 +130,38 @@ navbarText-secondary iconos">
 
     </section>
    </div>
-
+   <div class="container__modal" id="container__modal">
+    <div class="container__modal-form">
+        <form class="form_client">
+            <input type="text" name="name-client" id="name-form">
+            <label >Nombre</label>
+            
+            <input type="text" name="age-client" id="age-form">
+            <label >Edad</label>
+            
+            <input type="text" name="localidad-client" id="localidad-form">
+            <label >Localidad</label>
+           
+            <input type="text" name="barrio-client" id="barrio-form">
+            <label >Barrio</label>
+            
+            <input type="text" name="address-client" id="address-form">
+            <label >Direccion</label>
+            
+            <div class="container__button">
+                <button class="boton-actual" id="actualizador" onclick="test('#container__modal', event)">Actualizar</button>
+            </div>
+            
+        </form>
+    </div>
+   </div>
+  
 
 
     <footer>
         <p class="footer"> Hecho por Cynane's Proyect. | Todos los derechos reservados.</p>
     </footer>
-
+<script src="./simulador/control_modal.js"></script>
 </body>
 
 </html>
