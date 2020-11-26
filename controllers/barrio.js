@@ -9,8 +9,7 @@ exports.create = (req, res) => {
     }
     const barrio = new BarrioModel ({
         city: req.body.city,
-        locality: req.body.locality,
-        upz: req.body.upz,
+        locality: req.body.locality,        
         neighbourhood: req.body.neighbourhood
     })
 
@@ -31,8 +30,7 @@ exports.update=(req, res) => {
     }
         const barrio = {
             city: req.body.city,
-            locality: req.body.locality,
-            upz: req.body.upz,
+            locality: req.body.locality,            
             neighbourhood: req.body.neighbourhood
         }
 
@@ -59,6 +57,18 @@ exports.getAll = (req, res) => {
                     message: error.message
                 })
             })
+}
+
+exports.getLocality = async(req, res) =>{
+    BarrioModel.find({locality:req.params.locality})        
+        .then((barrios) => {res.send(barrios); console.log('llegue aqui') })
+        .catch(
+            (error) => {
+                res.status(500).send({
+                    message: error.message
+                })
+            })
+    
 }
 exports.getOne = (req, res) => {
     BarrioModel.findById(req.params.id)        

@@ -76,3 +76,11 @@ exports.deleteOne = (req, res) => {
                 })
             })
 }
+
+/* email: req.body.email,
+        phone: req.body.phone,
+        name: req.body.name,
+        lastName: req.body.lastName,        
+        password: req.body.password,
+        repeatPassword : req.body.repeatPassword,
+        rol: req.body.rol*/
