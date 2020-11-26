@@ -4,13 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const {conectDB} = require('./db')
-const user = require('./models/user')
-const product = require('./models/product')
-const barrio = require('./models/barrio')
-const tienda = require('./models/tienda')
-const cliente = require('./models/cliente')
-const tendero = require('./models/tendero')
-const sugerencia = require('./models/sugerencia')
+
 const app = express()
 
 app.use(cors())
@@ -25,7 +19,8 @@ require('./routes/tienda')(app)
 require('./routes/cliente')(app)
 require('./routes/tendero')(app)
 require('./routes/sugerencia')(app)
-
+require('./routes/surtido')(app)
+require('./routes/pedido')(app)
 
 app.listen(port, () => {
     console.log('El servidor se levanto correctamente.')
