@@ -10,7 +10,11 @@ exports.create = (req, res) => {
 
     const cliente = new ClienteModel({
         email: req.body.email,
+        phone: req.body.phone,
+        name: req.body.name,
+        lastName: req.body.name,
         password: req.body.password,
+        repeatPassword: req.body.repeatPassword,
     })
 
     cliente.save()
@@ -32,7 +36,11 @@ exports.update = (req, res) => {
 
     const cliente = {
         email: req.body.email,
-        password : req.body.password,
+        phone: req.body.phone,
+        name: req.body.name,
+        lastName: req.body.name,
+        password: req.body.password,
+        repeatPassword: req.body.repeatPassword,
     }
    
     ClienteModel.findByIdAndUpdate(req.params.id, cliente)
@@ -76,11 +84,3 @@ exports.deleteOne = (req, res) => {
                 })
             })
 }
-
-/* email: req.body.email,
-        phone: req.body.phone,
-        name: req.body.name,
-        lastName: req.body.lastName,        
-        password: req.body.password,
-        repeatPassword : req.body.repeatPassword,
-        rol: req.body.rol*/

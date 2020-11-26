@@ -1,9 +1,16 @@
 const mongoose = require('mongoose')
 
 const tenderoSchema = new mongoose.Schema({
-    city: {type: String, required: true}, 
-    locality: {type: String, required: true},
-    upz: {type: String, required: true},
-    neighborhood: {type: String, required: true}
+    business: {type: String, required: true},
+    nit: {type: String, required: true},
+    name: {type: String, required: true},
+    lastName: {type: String, required: true},
+    document: {type: String, required: true},
+    phone: {type: String, required: true},
+    email: { type: String, require: true, unique: true },
+    city: {type: String, required: true},
+    address: {type: String, required: true},
+    password: { type: String, require: true },
+    repeatPassword: { type: String, require: true},
 })
 module.exports = mongoose.model('Tendero', tenderoSchema)
