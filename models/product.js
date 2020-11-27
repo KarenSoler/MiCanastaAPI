@@ -7,6 +7,7 @@ const productSchema = new mongoose.Schema({
     unitM: {type: String, required:true},
     quantity: {type: Number, required:true},
     price: {type: Number, required:true},
-    productDiscount: {type: Number, required:true}
+    productDiscount: {type: Number, required:true},
+    imagen: {type: String, required:true}
  })
  module.exports = mongoose.model('Product', productSchema)

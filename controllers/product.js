@@ -14,7 +14,8 @@ exports.create = (req, res) => {
         unitM: req.body.unitM,
         quantity: req.body.quantity,
         price: req.body.price,
-        productDiscount: req.body.productDiscount
+        productDiscount: req.body.productDiscount,
+        imagen: req.body.imagen
     })
 
     product.save()
@@ -39,7 +40,8 @@ exports.update=(req, res) => {
             unitM: req.body.unitM,
             quantity: req.body.quantity,
             price: req.body.price,
-            productDiscount: req.body.productDiscount
+            productDiscount: req.body.productDiscount,
+            imagen: req.body.imagen
         }
 
     ProductModel.findByIdAndUpdate(req.params.id, product)
