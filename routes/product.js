@@ -3,6 +3,7 @@ module.exports = (app) => {
     app.post('/product/create', product.create)
     app.put('/product/update/:id', product.update)
     app.get('/product/getAll', product.getAll)
+    app.get('/product/getProduct/:productName', product.getProduct)
     app.get('/product/getOne/:id', product.getOne)
     app.delete('/product/delete/:id', product.deleteOne)
 }

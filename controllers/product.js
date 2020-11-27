@@ -57,7 +57,21 @@ exports.update=(req, res) => {
     )
 }
 exports.getAll = (req, res) => {
+    
     ProductModel.find()        
+        .then((products) => {res.send(products) })
+        .catch(
+            (error) => {
+                res.status(500).send({
+                    message: error.message
+                })
+            }
+        )
+
+}
+exports.getProduct = (req, res) => {
+   
+    ProductModel.find({productName:req.params.productName})        
         .then((products) => {res.send(products) })
         .catch(
             (error) => {
